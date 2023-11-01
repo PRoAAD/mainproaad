@@ -16,6 +16,4 @@ A principio de año los alumnos estaban perdidos, no sabíamos a donde ir, ni qu
 Visualizar horarios, que va cambiando a tiempo real, _(puede tener una opción de alarma en el momento que sucede el cambio de horario)._
 Además de que el profesor puede dejar un aviso emergente por si acaso en ese día no puede dar clases.
 
-
-> [!NOTA]
-> Esto es un proyecto institucional, si quieres puedes hechar un vistaso al contenido, pero en caso que lo utilice porfavor deja creditos a los autores.
+---
