@@ -17,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $apellido = $_POST["apellido"];
     $gmail = $_POST["gmail"];
     $password = md5($_POST["password"]); 
-    $materia = $_POST["materia"];
 
     // Insertar datos en la tabla persona
     $sql_persona = "INSERT INTO persona (dni, nombre, apellido, gmail, es_profesor, mypassword) VALUES ('$dni', '$nombre', '$apellido', '$gmail', true, '$password')";
@@ -26,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $persona_id = $conn->insert_id;
 
         // Insertar datos en la tabla profesor
-        $sql_profesor = "INSERT INTO profesor (nomprofesor, idcursoprof) VALUES ('$nombre', '$materia')";
+        $sql_profesor = "INSERT INTO profesor (nomprofesor, idcursoprof) VALUES ('$nombre')";
         if ($conn->query($sql_profesor) === TRUE) {
             echo "Registro de profesor exitoso.";
         } else {
@@ -177,7 +176,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             Apellido: <input type="text" name="apellido"><br>
             Gmail: <input type="email" name="gmail"><br>
             Contraseña: <input type="password" name="password"><br>
-            Materia: <input type="text" name="materia"><br>
+            <label for="curso">Asignacion:</label>
+            <?php include('functions/profeasig.php'); ?>
+            <br>
             <input type="submit" value="Registrar Profesor">
         </form>
     </div>

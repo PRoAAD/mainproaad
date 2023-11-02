@@ -74,14 +74,15 @@ if ($conn->connect_error) {
    si usted no puede dar su respectiva clase a algun curso 
    debera ir al curso y marcar su materia con rojo para 
    indicar que su materia estara suspendida por el momento.</p>
-  <a href="horarios.html" class="boton">Cursos</a>
+  <a href="TEMP_Cursos.php" class="boton">Cursos</a>
+  <a href="TEMP_Horarios.php" class="boton">Editar horarios</a>
 </main>
     <footer>
         <?php
         if (isset($_GET['nombre']) && isset($_GET['apellido'])) {
             $nombreUsuario = $_GET['nombre'];
             $apellidoUsuario = $_GET['apellido'];
-            echo "Accediste como: $nombreUsuario $apellidoUsuario";
+            echo "Accediste como el profesor: $nombreUsuario $apellidoUsuario";
         }
         ?>
     </footer>
