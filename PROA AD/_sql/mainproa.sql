@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-10-2023 a las 01:20:26
+-- Tiempo de generación: 06-11-2023 a las 19:06:04
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -78,9 +78,21 @@ INSERT INTO `cursos` (`idcurso`, `curso`) VALUES
 
 CREATE TABLE `materias` (
   `idmateria` int(11) NOT NULL,
-  `materia` int(11) NOT NULL,
+  `materia` varchar(502) NOT NULL,
   `idprofesor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `materias`
+--
+
+INSERT INTO `materias` (`idmateria`, `materia`, `idprofesor`) VALUES
+(1, 'Lengua Y Literatura', 0),
+(2, 'Matematicas', 0),
+(3, 'Club de Ciencias', 0),
+(4, 'Quimica', 0),
+(5, 'Geografia', 0),
+(6, 'Club de Arte', 0);
 
 -- --------------------------------------------------------
 
@@ -143,6 +155,12 @@ ALTER TABLE `cursos`
   ADD PRIMARY KEY (`idcurso`);
 
 --
+-- Indices de la tabla `materias`
+--
+ALTER TABLE `materias`
+  ADD PRIMARY KEY (`idmateria`);
+
+--
 -- Indices de la tabla `persona`
 --
 ALTER TABLE `persona`
@@ -170,6 +188,12 @@ ALTER TABLE `alumno`
 --
 ALTER TABLE `cursos`
   MODIFY `idcurso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `materias`
+--
+ALTER TABLE `materias`
+  MODIFY `idmateria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `profesor`

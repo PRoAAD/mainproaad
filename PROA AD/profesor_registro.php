@@ -170,13 +170,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="index.php" class="login-button">Volver al inicio</a>
     </header>
     <div class="container">
-        <form action="profesor_registro.php" method="POST">
+        <form action="" method="post">
             DNI: <input type="text" name="dni"><br>
             Nombre: <input type="text" name="nombre"><br>
             Apellido: <input type="text" name="apellido"><br>
             Gmail: <input type="email" name="gmail"><br>
             Contraseña: <input type="password" name="password"><br>
-            <label for="curso">Asignacion:</label>
+            <label for="curso">Año en curso:</label>
             <?php include('functions/profeasig.php'); ?>
             <br>
             <input type="submit" value="Registrar Profesor">
