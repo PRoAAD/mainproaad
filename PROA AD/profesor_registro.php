@@ -176,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             Apellido: <input type="text" name="apellido"><br>
             Gmail: <input type="email" name="gmail"><br>
             Contraseña: <input type="password" name="password"><br>
-            <label for="curso">Año en curso:</label>
+            <label for="curso">Asignación de Materias y Cursos:</label>
             <?php include('functions/profeasig.php'); ?>
             <br>
             <input type="submit" value="Registrar Profesor">
