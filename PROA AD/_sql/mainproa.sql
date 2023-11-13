@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-11-2023 a las 19:06:04
+-- Tiempo de generación: 13-11-2023 a las 18:36:20
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -40,6 +40,19 @@ CREATE TABLE `alumno` (
 
 INSERT INTO `alumno` (`idalumno`, `nombre`, `dni`, `idcurso`) VALUES
 (1, 'Martin', 46590169, 11);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `asignaciones`
+--
+
+CREATE TABLE `asignaciones` (
+  `idasig` int(11) NOT NULL,
+  `idprofesor` int(11) NOT NULL,
+  `idmateria` int(11) NOT NULL,
+  `idmaterias` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -149,6 +162,12 @@ ALTER TABLE `alumno`
   ADD KEY `nombre` (`nombre`);
 
 --
+-- Indices de la tabla `asignaciones`
+--
+ALTER TABLE `asignaciones`
+  ADD PRIMARY KEY (`idasig`);
+
+--
 -- Indices de la tabla `cursos`
 --
 ALTER TABLE `cursos`
@@ -182,6 +201,12 @@ ALTER TABLE `profesor`
 --
 ALTER TABLE `alumno`
   MODIFY `idalumno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `asignaciones`
+--
+ALTER TABLE `asignaciones`
+  MODIFY `idasig` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `cursos`
